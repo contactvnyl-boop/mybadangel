@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday بيبي كيرل 🎀</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Caveat:wght@600&family=Cairo:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#fbe4ea;--blush:#f4c1cf;--rose:#d98aa0;--cream:#fff8f0;--ink:#6b3b4a}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:var(--pink);color:var(--ink);font-family:'Playfair Display',Georgia,serif}
+body{background:radial-gradient(circle at 20% 10%,#fff3f6,var(--pink) 60%,var(--blush))}
+.ar{font-family:'Cairo',sans-serif;direction:rtl;unicode-bidi:isolate}
+.hand{font-family:'Caveat',cursive}
+#book{position:fixed;inset:0;perspective:1800px;overflow:hidden}
+.page{position:absolute;inset:0;overflow-y:auto;padding:60px 20px 170px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;transform-origin:left center;transition:transform .9s cubic-bezier(.6,.05,.3,1),opacity .9s,box-shadow .9s;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6'%3E%3Ccircle cx='1' cy='1' r='.6' fill='%23f0d9d0' fill-opacity='.5'/%3E%3C/svg%3E");backface-visibility:hidden}
+.page.before{transform:rotateY(-105deg);opacity:0;pointer-events:none;box-shadow:30px 0 60px rgba(120,50,70,.35)}
+.page.after{transform:translateX(5%) scale(.97);opacity:0;pointer-events:none}
+.page.cur{opacity:1}
+h1,h2{font-weight:400}h2{font-size:clamp(26px,6vw,40px)}
+.tag{font-family:'Caveat';font-size:22px;color:var(--rose);letter-spacing:.05em}
+.sub{font-style:italic;opacity:.8}
+.pol{background:#fff;padding:12px 12px 18px;box-shadow:0 10px 30px rgba(120,50,70,.25);transform:rotate(-2deg);max-width:min(86vw,380px);position:relative}
+.pol img{width:100%;display:block;max-height:52vh;object-fit:cover;object-position:top}
+.pol.big{max-width:min(88vw,420px);transform:rotate(1deg)}
+.pol::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;background:rgba(244,193,207,.7);transform:translateX(-50%) rotate(3deg)}
+.cap{font-size:clamp(24px,6vw,34px);margin-top:12px}
+.btn{border:0;background:var(--rose);color:#fff;padding:14px 30px;border-radius:40px;font:inherit;font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(217,138,160,.5);transition:transform .2s}
+.btn:hover{transform:scale(1.06)}.btn:active{transform:scale(.96)}
+.sticker{position:absolute;font-size:34px;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(6deg)}}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:rise 7s linear forwards;z-index:1;opacity:.7}
+@keyframes rise{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+.kitty{position:fixed;right:0;top:40%;font-size:46px;transform:translateX(35%) rotate(-12deg);animation:peek 4s ease-in-out infinite;z-index:5;pointer-events:none}
+@keyframes peek{50%{transform:translateX(5%) rotate(-12deg)}}
+.cover h1{font-size:clamp(40px,11vw,76px);line-height:1.15;margin-top:12vh}
+.cover .ar{font-size:clamp(36px,10vw,64px);color:var(--rose)}
+.counter{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.counter div{background:#fff;border:2px dashed var(--blush);border-radius:14px;padding:10px 14px;min-width:68px;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+.counter b{font-size:30px;display:block}.counter small{font-size:12px}
+.card{background:#fff;border-radius:6px;padding:20px;max-width:440px;width:100%;box-shadow:0 8px 24px rgba(120,50,70,.2);border-left:5px solid var(--blush)}
+.stamp{display:inline-block;border:3px solid #c0506c;color:#c0506c;padding:4px 12px;font-weight:800;transform:rotate(-8deg);letter-spacing:.1em;animation:pop .6s both .4s}
+@keyframes pop{from{transform:scale(2.5) rotate(-8deg);opacity:0}}
+.file{background:#fdf3e4;border:1px solid #e5cfae;padding:18px;max-width:460px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,.12);display:flex;flex-direction:column;gap:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:480px;width:100%}
+.flip{aspect-ratio:1;border:0;background:none;perspective:700px;cursor:pointer;font:inherit;color:inherit}
+.flip i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:10px;border-radius:14px;backface-visibility:hidden;transition:transform .7s;font-style:normal;box-shadow:0 6px 16px rgba(120,50,70,.2)}
+.flip{position:relative}
+.flip .f{background:var(--blush);font-size:15px}.flip .b{background:#fff;transform:rotateY(180deg);font-size:14px;line-height:1.35}
+.flip.on .f{transform:rotateY(-180deg)}.flip.on .b{transform:rotateY(0)}
+.env{position:relative;width:min(88vw,360px);height:240px;margin-top:200px}
+.env .back{position:absolute;inset:0;background:#f2b6c6;border-radius:6px;box-shadow:0 12px 30px rgba(120,50,70,.3)}
+.letter{position:absolute;left:6%;width:88%;bottom:8px;height:200px;background:#fffdf8;border-radius:4px;padding:18px;display:flex;align-items:center;justify-content:center;transition:transform 1.4s .6s cubic-bezier(.3,.8,.3,1),height 1.2s 1.2s;z-index:2;box-shadow:0 -2px 8px rgba(0,0,0,.1);overflow:hidden}
+.letter p{opacity:0;font-size:24px;line-height:1.7;transition:opacity 1.5s 2.1s}
+.front{position:absolute;inset:0;z-index:3;background:linear-gradient(135deg,transparent 50%,#f7c9d6 50%) left/50% 100% no-repeat,linear-gradient(225deg,transparent 50%,#f7c9d6 50%) right/50% 100% no-repeat,linear-gradient(#f4bccb,#f4bccb) bottom/100% 45% no-repeat;border-radius:6px;pointer-events:none;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;font-size:19px}
+.flap{position:absolute;top:0;left:0;width:100%;height:55%;background:#ee9db4;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s,z-index 0s .4s;z-index:4}
+.seal{position:absolute;top:36%;left:50%;width:54px;height:54px;margin:-4px 0 0 -27px;border-radius:50%;background:#c0506c;z-index:5;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;transition:.5s;box-shadow:0 4px 8px rgba(0,0,0,.3)}
+.env.open .seal{transform:scale(2);opacity:0}.env.open .flap{transform:rotateX(180deg);z-index:1}
+.env.open .letter{transform:translateY(-150px);height:260px}.env.open .letter p{opacity:1}
+#dock{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;background:rgba(255,248,240,.95);border:2px solid var(--blush);border-radius:20px;padding:8px 10px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(120,50,70,.3);max-width:94vw;flex-wrap:wrap;justify-content:center}
+#dock .vid{width:64px;height:36px;border-radius:8px;overflow:hidden;background:#000;transition:.4s}
+#dock .vid iframe{width:100%;height:100%;border:0}
+#dock.big{bottom:96px;flex-direction:column;width:min(92vw,520px)}#dock.big .vid{width:100%;height:auto;aspect-ratio:16/9}
+#dock button,.nav button{border:0;background:var(--blush);border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:16px}
+#dock .t{font-size:13px;line-height:1.2;text-align:left}
+.nav{position:fixed;top:10px;left:0;right:0;display:flex;justify-content:space-between;padding:0 12px;z-index:15;pointer-events:none}.nav>*{pointer-events:auto}
+.nav span{font-family:'Caveat';font-size:20px;align-self:center}
+.kt{width:64px;height:58px;display:block}.sticker .kt{width:72px;height:65px}
+.note{background:#fff7b8;padding:10px 16px;transform:rotate(2deg);box-shadow:0 4px 10px rgba(0,0,0,.15);font-size:22px;max-width:320px}
+.reveal{animation:soft 1.8s .5s both}.page:not(.cur) .reveal{animation:none}
+@keyframes soft{from{opacity:0;transform:scale(.94);filter:blur(10px) brightness(1.4)}to{opacity:1;transform:none;filter:none}}
+.glow{background-image:radial-gradient(circle at 50% 35%,#ffe3ec,#fff0f4 55%,#f9d3df)!important}
+.ribbon{font-family:Caveat;font-size:22px;color:var(--rose)}
+.tl{position:relative;padding-left:26px;max-width:460px;width:100%;text-align:left}.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:0;border-left:3px dotted var(--rose)}
+.tl .dot{position:absolute;left:0;top:6px;width:18px;height:18px;border-radius:50%;background:var(--rose);border:3px solid #fff;box-shadow:0 0 0 2px var(--rose)}
+.pitch{background:repeating-linear-gradient(90deg,#cfe8c6 0 24px,#c2e0b8 24px 48px);border-radius:10px;padding:10px;font-size:34px;margin:8px 0;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.dict{width:150px;height:190px;background:linear-gradient(135deg,#f4b6c7,#e58fa8);border-radius:4px 14px 14px 4px;border-left:14px solid #c0506c;box-shadow:6px 8px 18px rgba(120,50,70,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-size:18px;position:relative;transform:rotate(-4deg)}
+.dict .ar{font-size:30px}.dict .stamp{position:absolute;bottom:14px;right:-18px;background:rgba(255,255,255,.9);font-size:12px}
+.board{background:#e9c9a5;background-image:radial-gradient(#d9b68e 1px,transparent 1px);background-size:8px 8px;border:8px solid #b98a5e;border-radius:6px;padding:20px 14px;display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:480px;width:100%;position:relative}
+.board .pn{background:#fff;padding:12px 10px;position:relative;font-size:14px;box-shadow:0 4px 8px rgba(0,0,0,.2);width:44%;min-width:130px}
+.board .pn:nth-child(odd){transform:rotate(-3deg)}.board .pn:nth-child(even){transform:rotate(3deg)}
+.board .pn::before{content:"📍";position:absolute;top:-14px;left:50%;transform:translateX(-50%)}
+.board .pn.ev{background:#fffbe8;font-size:22px}
+.late{opacity:0}.page.cur .late{animation:fin 1.4s 2.6s forwards}@keyframes fin{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><symbol id="kt" viewBox="0 0 100 90"><path d="M15 40L12 8l26 14q12-4 24 0l26-14-3 32q11 15-3 30Q50 90 18 70 4 55 15 40Z" fill="#fff" stroke="#6b3b4a" stroke-width="3" stroke-linejoin="round"/><circle cx="34" cy="48" r="3.5" fill="#6b3b4a"/><circle cx="66" cy="48" r="3.5" fill="#6b3b4a"/><ellipse cx="50" cy="56" rx="5" ry="3.5" fill="#f2c14e"/><path d="M8 52h18M8 60l16-3M92 52H74M92 60l-16-3" stroke="#6b3b4a" stroke-width="2"/><g transform="translate(76 16)"><path d="M0 0L-14-10v20ZM0 0L14-10v20Z" fill="#e0708c" stroke="#6b3b4a" stroke-width="2"/><circle r="4.5" fill="#f08aa4" stroke="#6b3b4a" stroke-width="2"/></g></symbol></svg><div id="book">
+<section class="page cover cur" data-i="0"><div class="sticker" style="left:10%;top:8%">🎀</div><div class="sticker" style="right:6%;top:5%;animation-delay:1s"><svg class="kt" viewBox="0 0 100 90"><use href="#kt"/></svg></div><div class="sticker" style="left:14%;top:30%;animation-delay:.5s">🌸</div><div class="sticker" style="right:18%;top:48%;animation-delay:1.5s">💗</div>
+<h1>Happy Birthday</h1><div class="ar">بيبي كيرل 🎀🌹</div>
+<p class="sub">A little world made just for you.</p><button class="btn" id="start">Start the Journey</button></section>
+
+<section class="page after" data-i="1"><div class="tag">Chapter 00</div><h2>The Little Yara</h2>
+<div class="pol"><img src="images/ch00.jpg" alt="Little Yara"><div class="cap ar">يا وجع الاسكرين شوت</div></div></section>
+
+<section class="page after" data-i="2"><div class="tag">Chapter 01</div><h2>Yara Steve</h2>
+<div class="note hand">Scrapbook discovery: suspicious resemblance spotted 🔎</div>
+<div class="pol reveal"><span class="sticker" style="right:-16px;top:-26px">🍕</span><img src="images/ch01.jpg" alt="Yara as a child wearing glasses"><div class="cap ar">يارا ستيف</div></div>
+<div class="stamp">PIZZA STEVE MATCH 🍕</div><div class="sticker" style="position:static"><svg class="kt" viewBox="0 0 100 90"><use href="#kt"/></svg></div></section>
+
+<section class="page after glow" data-i="3"><div class="ribbon">little Yara ➜ now</div><div class="tag">Chapter 02</div><h2>Look How You've Grown</h2>
+<div class="pol big reveal" style="box-shadow:0 0 70px rgba(244,193,207,.9),0 10px 30px rgba(120,50,70,.25)"><img src="images/ch02.jpg" alt="Yara in a pink dress"><div class="cap ar">كبرتي واحلويتي يعم ومحدش قدك</div></div><div class="sticker" style="position:static">🌸🎀🌸</div></section>
+
+<section class="page after" data-i="4"><div class="tag">Chapter · a memory card</div><h2>The Day Our Story Started</h2>
+<div class="tl"><span class="dot"></span><div class="card"><div class="hand" style="font-size:30px">July 7, 2026</div>
+<div class="pitch">⚽ 🇵🇹 😢</div>
+<p>The first conversation: Cristiano Ronaldo crying after Portugal's World Cup elimination.</p>
+<p style="margin-top:8px">A conversation about football that unexpectedly became the beginning of many conversations.</p>
+<p class="sub" style="margin-top:10px">Who would've thought that a conversation about football would become one of my favorite little memories?</p></div></div>
+<figure class="pol" id="ron" style="margin:6px auto 0;transform:rotate(2deg)"><img src="images/ronaldo.jpg" alt="Cristiano Ronaldo in tears after Portugal's World Cup elimination" loading="lazy" onerror="document.getElementById('ron').style.display='none'"><div class="cap ar">دموع الدون السبب</div></figure>
+<div class="tag">Time since that day…</div><div class="counter" id="ctr"></div></section>
+
+<section class="page after" data-i="5"><div class="tag">Case file No. بلايز</div><h2>The Stolen Dictionary</h2><p class="sub">An unauthorized vocabulary transfer.</p>
+<div style="display:flex;align-items:center;gap:12px"><div class="dict"><span>Dictionary of</span><b>Abu Aymen</b><span class="ar">بلايز</span><div class="stamp">STOLEN</div></div><svg class="kt" viewBox="0 0 100 90"><use href="#kt"/></svg><span style="font-size:40px">🔎</span></div>
+<div class="board"><div class="pn">Suspect:<br><b>Yara Mohamed El Ansary</b></div><div class="pn">Victim:<br><b>Abu Aymen</b> (owner of the vocabulary)</div><div class="pn ev ar">دليل أ: بلايز</div><div class="pn">Charge:<br><b>Stealing a way of talking</b></div></div>
+<div class="file"><div class="stamp" style="align-self:flex-start">OFFICIAL INVESTIGATION REPORT</div>
+<p>Somewhere along the way, you stole my entire way of talking.</p><p>Even my vocabulary isn't safe anymore.</p><p>And don't think I forgot about <span class="ar">بلايز</span>.</p><p class="hand" style="font-size:22px">Anyway, I'm still investigating this case.</p><div class="stamp" style="align-self:flex-end">VOCABULARY STOLEN</div></div></section>
+
+<section class="page after" data-i="6"><div class="tag">Tap a card</div><h2>Things I Secretly Adore About You</h2>
+<div class="grid" id="grid"></div><p class="sub">And there are a few more things... but let's not expose everything today.</p></section>
+
+<section class="page after" data-i="7" id="music"><div class="tag">Laufey · From The Start</div><h2>Because I Know You Love This One...</h2>
+<p class="sub" style="max-width:420px">I know how much you love Laufey, so I had to bring one of your favorite songs into your little birthday universe.</p>
+<p><a href="https://youtu.be/lSD_L-xic9o" target="_blank" rel="noopener" style="color:var(--rose)">Open on YouTube if the player doesn't load</a></p></section>
+
+<section class="page after" data-i="8"><p style="max-width:420px;font-size:22px;margin-top:6vh">Okay... enough embarrassing you for today. There's one last thing.</p>
+<div class="late" style="display:flex;flex-direction:column;align-items:center"><div class="env" id="env"><div class="back"></div><div class="letter"><p class="ar">خلي بالك من القاموس ال ابو ايمني عشان يخص صاحبه</p></div><div class="front hand">To my favorite little troublemaker.</div><div class="flap"></div><div class="seal">♥</div></div>
+<button class="btn" id="open" style="margin-top:40px">Open Your Letter</button></div></section>
+</div>
+
+<div class="nav"><button id="prev" aria-label="Previous page">‹</button><span id="lbl"></span><div><button id="sfx" aria-label="Page sounds">📖</button> <button id="mus" aria-label="Music">🎵</button> <button id="next" aria-label="Next page">›</button></div></div>
+<div class="kitty" aria-hidden="true"><svg class="kt" viewBox="0 0 100 90"><use href="#kt"/></svg></div>
+<div id="dock"><div class="vid"><div id="yt"></div></div><div class="t"><b>From The Start</b><br>Laufey</div><button id="pp" aria-label="Play or pause">▶</button></div>
+
+<script>
+const pages=[...document.querySelectorAll('.page')],N=pages.length;let cur=0,started=false;
+const S=(k,v)=>{try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v)}catch(e){}};
+let sfxOn=S('sfx')!=='0',musOn=S('mus')!=='0';
+const $=id=>document.getElementById(id);
+function refresh(){$('sfx').style.opacity=sfxOn?1:.4;$('mus').style.opacity=musOn?1:.4}refresh();
+// paper sound (Web Audio)
+let ac;function flip(){if(!sfxOn)return;try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();const d=ac.sampleRate*.35,b=ac.createBuffer(1,d,ac.sampleRate),x=b.getChannelData(0);
+for(let i=0;i<d;i++)x[i]=(Math.random()*2-1)*Math.pow(1-i/d,2)*(.5+.5*Math.sin(i/180));
+const s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=b;f.type='bandpass';f.frequency.value=2500;g.gain.value=.12;s.connect(f);f.connect(g);g.connect(ac.destination);s.start()}catch(e){}}
+function hearts(){for(let i=0;i<6;i++){const h=document.createElement('div');h.className='heart';h.textContent=['💗','🎀','🌸'][i%3];h.style.left=Math.random()*100+'vw';h.style.fontSize=14+Math.random()*16+'px';h.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),8000)}}
+function go(n){if(!started||n<0||n>=N||n===cur)return;flip();hearts();
+pages.forEach((p,i)=>{p.classList.remove('cur','before','after');p.classList.add(i<n?'before':i>n?'after':'cur')});
+pages[n].scrollTop=0;cur=n;$('lbl').textContent=n+' / '+(N-1);$('dock').classList.toggle('big',n===7)}
+$('start').onclick=()=>{started=true;hearts();go(1);musOn=S('mus')!=='0';if(musOn)play()};
+$('next').onclick=()=>go(cur+1);$('prev').onclick=()=>go(cur-1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+let tx=null;$('book').addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+$('book').addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>70)go(cur+(d<0?1:-1));tx=null},{passive:true});
+$('sfx').onclick=()=>{sfxOn=!sfxOn;S('sfx',sfxOn?'1':'0');refresh()};
+$('mus').onclick=()=>{musOn=!musOn;S('mus',musOn?'1':'0');refresh();musOn?play():pause()};
+// YouTube (single persistent player, never reloaded)
+let yp,ready=false,want=false;
+const tag=document.createElement('script');tag.src='https://www.youtube.com/iframe_api';document.head.appendChild(tag);
+window.onYouTubeIframeAPIReady=()=>{yp=new YT.Player('yt',{videoId:'lSD_L-xic9o',playerVars:{playsinline:1,rel:0,modestbranding:1},events:{onReady:()=>{ready=true;if(want)yp.playVideo()},onStateChange:e=>$('pp').textContent=e.data===1?'⏸':'▶'}})};
+function play(){want=true;if(ready)yp.playVideo()}function pause(){want=false;if(ready)yp.pauseVideo()}
+$('pp').onclick=()=>{if(!ready)return;yp.getPlayerState()===1?(musOn=false,pause()):(musOn=true,play());S('mus',musOn?'1':'0');refresh()};
+// counter since July 7, 2026 00:00 Cairo (UTC+3)
+const t0=new Date('2026-07-07T00:00:00+03:00').getTime();
+function tick(){let s=Math.max(0,Math.floor((Date.now()-t0)/1000));const v=[[Math.floor(s/86400),'Days'],[Math.floor(s/3600)%24,'Hours'],[Math.floor(s/60)%60,'Minutes'],[s%60,'Seconds']];
+$('ctr').innerHTML=v.map(a=>`<div><b>${a[0]}</b><small>${a[1]}</small></div>`).join('')}tick();setInterval(tick,1000);
+// reveal cards
+const cards=[['Our conversations','Somehow, even the most random conversations with you become interesting.'],['The voice notes','You actually listen to my ridiculously long voice notes. Your patience deserves scientific research.'],['Your singing','And when you sing for me... okay, that\'s actually one of my favorite things.'],['Deep conversations','From complete nonsense to deep philosophical conversations. We somehow manage both.'],['Professional Culture Pretenders','Our shared sticker. Very intellectual. Very cultured. Allegedly.'],['Alexandrian accent','That Alexandrian accent... especially the legendary <span class="ar">واو الجماعة</span>.']];
+$('grid').innerHTML=cards.map(c=>`<button class="flip"><i class="f">${c[0]} 🎀</i><i class="b"><span>${c[1]}</span></i></button>`).join('');
+document.querySelectorAll('.flip').forEach(b=>b.onclick=()=>{b.classList.toggle('on');hearts()});
+$('open').onclick=()=>{$('env').classList.add('open');$('open').style.display='none';hearts()};
+$('lbl').textContent='';
+</script></body></html>
